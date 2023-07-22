@@ -74,8 +74,6 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   jekyll-tagging
-  kramdown
-  rouge
   wdm (>= 0.1.0)
 
 BUNDLED WITH
