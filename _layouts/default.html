@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/light.css">
+    <link rel="stylesheet" href="/assets/css/dark.css">
+    <!-- for the font in the site banner-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    <title>{{ page.title }}</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/assets/js/page-utils.js"></script>
+  </head>
+
+  <body>
+    <div id="page-nav-menu" class="sticky-top nav-menu not-small-screen">
+      <nav>
+        <h2>Page</h2>
+        <hr>
+        <p><a href="#">Top</a></p>
+        {% assign navs = page.inner-nav | split: "," %}
+        {% for nav in navs %}
+          <p><a href="#{{nav}}">{{ nav | capitalize }}</a></p>
+        {% endfor %}
+      </nav>
+    </div>
+
+    <header class="center">
+      <!-- this should fill the width of the screen and children should flow left to right on desktop -->
+      <!-- on mobile, fill top to bottom and expand from burger button-->
+      <div class="site-banner">
+        <img class="headshot" src="/assets/images/brad1.JPG" alt="a picture of a handsome young man">
+        <div class="banner-text">
+          <div class="right-align"><img id="dark-mode-button" src="/assets/images/logos/light/dark-mode.png"></div>
+          <h1>Bradley McFadden</h1>
+          <p id="role" class="h2-style">Software Developer</p>
+          <div id="tagline">
+            <p>Welcome to my home page!</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="site-nav-menu" class="sticky-top nav-menu not-small-screen">
+      <nav>
+        <h2>Site</h2>
+        <hr>
+        {% include navigation.html %}
+      </nav>
+    </div>
+
+    <div id="mobile-site-nav" class="center small-screen-only">
+      <div id="mobile-site-nav-inner">
+        <button id="mobile-site-nav-button" class="flat">Navigation</button>
+        <nav id="mobile-site-nav-items" class="hidden">
+          {% include navigation.html %}
+        </nav>
+      </div>
+    </div>
+
+    <main class="center">
+      <article>
+        {{ content }}
+      </article>
+    </main>
+  </body>
+  <footer class="center">
+    <div id="footer-contents">
+      <p>Copyright © 2023 Bradley McFadden. All rights reserved.</p>
+    </div>
+  </footer>
+</html>

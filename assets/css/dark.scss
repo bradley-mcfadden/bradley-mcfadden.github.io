@@ -1,0 +1,155 @@
+---
+---
+
+@import "monokai.css";
+
+body.dark-mode {
+    background: rgb(154,124,173);
+    background: linear-gradient(180deg, rgba(154,124,173,1) 0%, rgba(127,127,191,1) 50%, rgba(8,6,27,1) 100%);
+    color: rgb(220, 220, 220);
+}
+
+.dark-mode {
+    header {
+        background-color: rgb(15, 15, 15);
+    }
+
+    article {
+        background-color: rgb(20, 20, 10);
+        border-right-color: whitesmoke;
+        border-left-color: whitesmoke;
+    }
+
+    .site-banner {
+        border-color: whitesmoke;
+    }
+
+    #contact {
+        color: whitesmoke;
+    }
+
+    #tagline {
+        color: whitesmoke;
+    }
+
+    #footer-contents {
+        border-color: whitesmoke;
+        background-color: whitesmoke;
+    }
+
+    .section-header>hr {
+        border-top-color: whitesmoke;
+    }
+
+    .nav-menu {
+        background-color:rgb(20, 20, 10);
+        border-color: whitesmoke;
+    }
+
+    .nav-menu hr {
+        border-top-color:whitesmoke;
+    }
+
+    .nav-menu a, #mobile-site-nav a {
+        color: whitesmoke;
+    }
+
+    .nav-menu a:hover, #mobile-site-nav a:hover {
+        color:  steelblue;
+        background-color: whitesmoke;
+    }
+
+    .job-summary {
+        border-color:whitesmoke;
+        background-color: darkslateblue;
+    }
+
+    .job-footer {
+        background-color: rgb(30, 30, 30);
+    }
+
+    #mobile-site-nav-inner {
+        border-color: whitesmoke;
+    }
+
+    #mobile-site-nav {
+        background-color: rgb(30, 30, 30);
+    }
+
+    #mobile-site-nav-button {
+        color: white;
+        background-color: black;
+        border-bottom-color: whitesmoke;
+    }
+
+    #mobile-site-nav-items {
+        border-bottom-color:whitesmoke;
+    }
+
+    .mobile-nav-item {
+        background-color: rgb(30, 30, 30);
+        border-bottom-color:gray;
+    }
+
+    .mobile-nav-item:hover {
+        background-color: lightgrey;
+    }
+
+    .mobile-nav-item:active {
+        background-color: grey;
+    }
+
+    a:link {
+        color:  steelblue;
+    }
+
+    a:visited {
+        color: steelblue;
+    }
+
+    #dark-mode-button {
+        content: url("/assets/images/logos/dark/dark-mode.png");
+    }
+
+    #social-mail {
+        content: url("/assets/images/logos/dark/mail.png");
+    }
+
+    #social-linkedin {
+        content: url("/assets/images/logos/dark/linkedin.png");
+    }
+
+    #social-github {
+        content: url("/assets/images/logos/dark/github.png");
+    }
+
+    #footer-contents {
+        background-color: #111122;
+    }
+
+    #rust-icon{
+        background-color: white;
+    }
+
+    #opengl-icon {
+        content: url(/assets/images/logos/dark/OpenGL_White_100px_June16.png)
+    }
+
+    #unity-icon {
+        content: url(/assets/images/logos/dark/unity.png)
+    }
+
+    i, em {
+        color: lightpink;
+    }
+
+    @media screen and (max-width: 450px) {
+        #role {
+            color: #bbbbbb;
+        }
+
+        #tagline p {
+            color: #aaaaaa;
+        }
+    }
+}

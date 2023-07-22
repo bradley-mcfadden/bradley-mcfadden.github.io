@@ -1,0 +1,21 @@
+---
+title: Bradley McFadden's Blog
+---
+
+<h1>Latest posts</h1>
+<ul>
+  {% for post in site.posts %}
+    <li class="list-no-decoration content-item">
+      <div class="flex-hbox">
+        <a class="content-title" href="{{ post.url }}">{{ post.title }}</a>
+        <p class="content-date">{{post.date | date_to_string}}</p>
+      </div>
+      <div class="flex-hbox tag-chips">
+        {% for tag in post.tags %}
+          <p class="tag-chip"><a href="/tag/{{tag}}.html">{{ tag }}</a></p>
+        {% endfor %}
+      </div>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>

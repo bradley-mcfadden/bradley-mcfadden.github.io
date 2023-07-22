@@ -1,0 +1,31 @@
+---
+layout: default
+inner-nav: relevant-posts
+---
+<h1>{{ page.title }}</h1>
+<div class="flex-hbox tag-chips">
+  {% for tag in page.tags %}
+    <p class="tag-chip"><a href="/tag/{{tag}}.html">{{ tag }}</a></p>
+  {% endfor %}
+</div>
+<hr>
+
+{{ content }}
+
+<hr>
+
+{% assign relevant_posts = site.posts | where: 'project', page.short-name %}
+{% if relevant_posts %}
+<h2 name="relevant-posts">Blog posts about {{ page.title}}</h2>
+{% endif %}
+<ul>
+    {% for post in relevant_posts %}
+    <li class="list-no-decoration content-item">
+      <div class="flex-hbox">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <p class="content-date-left">on {{post.date | date_to_string}}</p>
+      </div>
+      {{post.excerpt}}
+    </li>
+  {% endfor %}
+</ul>
