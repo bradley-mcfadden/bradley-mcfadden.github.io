@@ -15,6 +15,7 @@ const HIDDEN_CLASS = "hidden";
 const DARK_MODE_CLASS = "dark-mode";
 
 $( document ).ready(function() {
+    console.log("ready");
     loadDarkMode();
     $("#mobile-site-nav-button").click(hideMobileItems);
     $("#dark-mode-button").click(() => {
@@ -24,6 +25,7 @@ $( document ).ready(function() {
 })
 
 window.onload = () => {
+    console.log("onload");
     if (window.matchMedia) {
         var colorSchemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
         colorSchemeQuery.addEventListener("change", updateColorScheme);
@@ -31,11 +33,14 @@ window.onload = () => {
 }
 
 function loadDarkMode() {
-    if (!localStorage.getItem(KEY_USES_DARK_MODE) === null) {
+    if (localStorage.getItem(KEY_USES_DARK_MODE) === null) {
+        console.log("local storage does not have dark mode");
+    } else {
         let body = $("body");
         if (!body.hasClass(DARK_MODE_CLASS)) {
             body.addClass(DARK_MODE_CLASS);
         }
+        console.log("local storage has dark mode");
     }
 }
 
@@ -58,6 +63,7 @@ function hideMobileItems() {
 }
 
 function toggleDarkMode() {
+    console.log("toggle dark mode");
     let body = $("body");
     if (body.hasClass(DARK_MODE_CLASS)) {
         body.removeClass(DARK_MODE_CLASS);
