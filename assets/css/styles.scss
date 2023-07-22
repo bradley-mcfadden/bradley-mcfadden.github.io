@@ -511,13 +511,12 @@ article > h2 {
 .tag-chip,a[rel="tag"], #tag-cloud a {
     border-radius: 8px;
     background-color: slateblue;
-    color: white;
     margin-right: 8px;
 }
 
 .tag-chip a:any-link,a[rel="tag"]:any-link, #tag-cloud a:any-link {
     text-decoration: none;
-    color: white;
+    color: white !important;
     padding: 2px;
 }
 
