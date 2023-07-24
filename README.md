@@ -13,4 +13,4 @@ content, and other hobbies I'm passionate about, like video games and rock
 climbing.
 
 Check out the site here:
-(bradley-mcfadden.github.io)[https://bradley-mcfadden.github.io]
+[bradley-mcfadden.github.io](https://bradley-mcfadden.github.io)
