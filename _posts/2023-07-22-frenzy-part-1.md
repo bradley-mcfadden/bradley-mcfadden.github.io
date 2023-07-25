@@ -2,6 +2,7 @@
 tags: godot game-dev
 project: frenzy
 title: Frenzy, Part 1
+inner-nav: 
 ---
 
 Throughout university, I dabbled with game development. I started
