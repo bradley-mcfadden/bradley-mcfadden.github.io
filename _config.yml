@@ -22,6 +22,9 @@ defaults:
     values:
       layout: "default"
 
+url:
+  "https://bradley-mcfadden.github.io"
+
 tag_page_layout:
   "tag_page"
 

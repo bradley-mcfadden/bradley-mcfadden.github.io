@@ -17,7 +17,7 @@ to bolts drilled into the rock, and consist of a few carabiners and
 slings or rope holding the belay rope. Here's an example we set up
 from a climb at Timberwolf.
 
-![top rope anchor example](../../../assets/images/projects/carabiner-story/anchor.jpg)
+![top rope anchor example]({{site.url}}/assets/images/projects/carabiner-story/anchor.jpg)
 
 We climbed to the top of the crag and chose two routes to set up.
 From the Climb Sudbury routes (available [here](https://www.climbsudbury.com/bethel)), 
@@ -33,7 +33,7 @@ the carabiner wedged firmly in-place. A half hour of trying to
 pry it free resulted in just disappointment. An image of roughly how
 it was stuck is included below:
 
-![image describing the problem](../../../assets/images/projects/carabiner-story/problem.png)
+![image describing the problem]({{site.url}}/assets/images/projects/carabiner-story/problem.png)
 
 We still climbed, and we had a decent time, but I could not get
 the carabiner unlocked to grab my partner's sling. We decided that
@@ -65,7 +65,7 @@ obvious damage to the bolt, and we were able to recover the sling. Interestingly
 the carabiner broke at the gate and immediately opposite to the gate, which was
 where I used thw wrench.
 
-![broken carabiner pieces](../../../assets/images/projects/carabiner-story/broken.jpg)
+![broken carabiner pieces]({{site.url}}/assets/images/projects/carabiner-story/broken.jpg)
 
 At the end of the day, there are a few lessons to be learned from this unfortunate
 sitation:

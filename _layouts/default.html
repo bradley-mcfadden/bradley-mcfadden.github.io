@@ -1,19 +1,21 @@
+---
+---
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="/assets/css/light.css">
-    <link rel="stylesheet" href="/assets/css/dark.css">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/styles.css">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/light.css">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/dark.css">
     <!-- for the font in the site banner-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="{{ site.url }}/assets/images/favicon.ico" type="image/x-icon" />
     <title>{{ page.title }}</title>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/assets/js/page-utils.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/js/page-utils.js"></script>
   </head>
 
   <body class="static-background">
@@ -33,9 +35,9 @@
       <!-- this should fill the width of the screen and children should flow left to right on desktop -->
       <!-- on mobile, fill top to bottom and expand from burger button-->
       <div class="site-banner">
-        <img class="headshot" src="/assets/images/brad1.JPG" alt="a picture of a handsome young man">
+        <img class="headshot" src="{{ site.url }}/assets/images/brad1.JPG" alt="a picture of a handsome young man">
         <div class="banner-text">
-          <div class="right-align"><img id="dark-mode-button" src="/assets/images/logos/light/dark-mode.png"></div>
+          <div class="right-align"><img id="dark-mode-button" src="{{ site.url }}/assets/images/logos/light/dark-mode.png"></div>
           <h1>Bradley McFadden</h1>
           <p id="role" class="h2-style">Software Developer</p>
           <div id="tagline">

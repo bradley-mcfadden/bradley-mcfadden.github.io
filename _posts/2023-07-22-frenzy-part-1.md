@@ -34,7 +34,7 @@ game engine, and I heard it handled 2D well and had a *Python*-like
 syntax. I downloaded it and gave it a try. I created a few random
 apps, and some more complex things like a roguelike platformer.
 
-![uss screenshot](../../../assets/images/projects/uss/k2.png)
+![uss screenshot]({{ site.url }}/assets/images/projects/uss/k2.png)
 
 After graduating, I wondered what I wanted to do in my spare time.
 I had always wanted to do more with game dev, and since having completed
@@ -45,7 +45,7 @@ where you awaken after some long period underground to the modern world,
 to a complete hostile environement, and use your cool sandworm abilities
 to wreak havoc and try to find some semblance of the past.
 
-![frenzy concept art](../../../assets/images/projects/frenzy/worm_burst.jpeg)
+![frenzy concept art]({{ site.url }}/assets/images/projects/frenzy/worm_burst.jpeg)
 
 That's roughly how the idea for *Frenzy* came about. It was inspired by
 games like *Hotline Miami* and *Nuclear Throne*. The first work on 
@@ -64,7 +64,7 @@ The enemies also have a state machine that modifies their movement
 behaviours. They can seek, run away, chase, patrol, and other such
 behaviours.
 
-![sandworm biting an enemy](../../../assets/images/projects/frenzy/chomp.gif)
+![sandworm biting an enemy]({{ site.url }}/assets/images/projects/frenzy/chomp.gif)
 
 One of my favourite parts of the development was creating the art and
 assets. I had recently taken computer graphics, so I knew I wanted to
@@ -75,7 +75,7 @@ sheets is rendered twice, once with the normal texture and a second time
 with a normal map. In game, the characters use an `AnimationPlayer` and
 and `Sprite` to control their animation.
 
-![worm rotating in ice](../../../assets/images/projects/frenzy/ice.gif)
+![worm rotating in ice]({{ site.url }}/assets/images/projects/frenzy/ice.gif)
 
 For now, that's all I'll say about the project. I'll get more into it in 
 future blog posts that link from this page.

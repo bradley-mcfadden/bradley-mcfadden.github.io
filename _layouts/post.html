@@ -5,7 +5,7 @@ layout: default
 <p><i>{{ page.date | date: "%Y/%m/%d" }}</i></p>
 <div class="flex-hbox tag-chips">
     {% for tag in page.tags %}
-      <p class="tag-chip"><a href="/tag/{{tag}}.html">{{ tag }}</a></p>
+      <p class="tag-chip"><a href="{{ site.url }}/tag/{{tag}}.html">{{ tag }}</a></p>
     {% endfor %}
   </div>
 <hr>

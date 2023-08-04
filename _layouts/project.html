@@ -5,7 +5,7 @@ inner-nav: relevant-posts
 <h1>{{ page.title }}</h1>
 <div class="flex-hbox tag-chips">
   {% for tag in page.tags %}
-    <p class="tag-chip"><a href="/tag/{{tag}}.html">{{ tag }}</a></p>
+    <p class="tag-chip"><a href="{{ site.url }}tag/{{tag}}.html">{{ tag }}</a></p>
   {% endfor %}
 </div>
 <hr>
