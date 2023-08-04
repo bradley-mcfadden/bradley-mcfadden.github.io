@@ -189,26 +189,35 @@ class MdParser:
         tokens = self.current_line.lower().strip().split(" ")
         # print(tokens)
         nav_label = "-".join([x.lower() for x in tokens[1:]])
-        self.nav_labels.append(nav_label)
+        self.append_to_nav_labels_uniq(nav_label)
 
     def prev_line_to_inner_nav(self) -> None:
         if self.last_token != EMPTY:
             tokens = self.last_line().lower().strip().split(" ")
             nav_label = "-".join(tokens)
-            self.nav_labels.append(nav_label)
+            self.append_to_nav_labels_uniq(nav_label)
+
 
     def line_to_liquid_def(self) -> None:
         var_name = self.last_match.group(1)
         var_value = self.last_match.group(2)
 
         if var_name == "inner-nav":
-            self.nav_labels.extend(var_value.split(","))
+            self.extend_to_nav_labels_uniq(var_value.split(","))
 
     def last_line(self) -> str:
         return self.file_buffer[-1:][0]
 
     def last_token(self) -> str:
         return self.token_buffer[-1:][0]
+    
+    def extend_to_nav_labels_uniq(self, labels: list) -> None:
+        for label in labels:
+            self.append_to_nav_labels_uniq(label)
+
+    def append_to_nav_labels_uniq(self, label: str) -> None:
+        if not label in self.nav_labels:
+                self.nav_labels.append(label)
 
 
 def main() -> None:

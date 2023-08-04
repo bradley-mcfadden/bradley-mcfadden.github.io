@@ -5,7 +5,7 @@ shopt -s globstar
 for target in **/*.md
 do
     echo "Working on ${target}"
-    cp "${target}" "${target}.tmp"
-    python3 md_h_to_liq.py < "${target}" > "${target}.out"
+    cp "${target}" "_bak/${target}"
+    python3 md_h_to_liq.py < "_bak/${target}" > "${target}"
 done
 shopt -u globstar
