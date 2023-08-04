@@ -101,7 +101,7 @@ class MdParser:
             HL_FENCE : re.compile(r"^\s*{%\s*highlight\s+(\S+)\s*%}\s*$"),
             END_HL_FENCE : re.compile(r"^\s*{%\s*endhighlight\s*%}\s*$"),
             HEADER : re.compile(r"^#+\s+(.*)\s*$"),
-            LIQUID_DEF : re.compile(r"^([a-zA-Z0-9_]+):\s*(.*)\s*$"),
+            LIQUID_DEF : re.compile(r"^([a-zA-Z0-9_-]+):\s*(.*)\s*$"),
             CODE_FENCE : re.compile(r"^\s*```\s*.*\s*$"),
             FM_FENCE : re.compile(r"^---\s*$"),
             EMPTY : re.compile(r'^\s*$'),
@@ -189,14 +189,12 @@ class MdParser:
         tokens = self.current_line.lower().strip().split(" ")
         # print(tokens)
         nav_label = "-".join([x.lower() for x in tokens[1:]])
-        # print(f"Added {nav_label}")
         self.nav_labels.append(nav_label)
 
     def prev_line_to_inner_nav(self) -> None:
         if self.last_token != EMPTY:
             tokens = self.last_line().lower().strip().split(" ")
             nav_label = "-".join(tokens)
-            # print(f"Added {nav_label}")
             self.nav_labels.append(nav_label)
 
     def line_to_liquid_def(self) -> None:
