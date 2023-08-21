@@ -17,6 +17,7 @@
 
 import re
 import sys
+import urllib.parse
 
 HL_FENCE = "hl-fence"
 END_HL_FENCE = "end-hl-fence"
@@ -71,14 +72,14 @@ class MdParser:
                     match = self.tokens[LIQUID_DEF].match(line)
                     var_name = match.group(1)
                     if var_name == "inner-nav":
-                        filelike.write("inner-nav: {}\n".format(",".join(self.nav_labels)))
+                        filelike.write("inner-nav: {}\n".format(self.encoded_inner_nav()))
                         wrote_inner_nav = True
                     else:
                         filelike.write(line)
                 elif token == FM_FENCE:
                     fm_fence_count += 1
                     if fm_fence_count == 2:
-                        filelike.write("inner-nav: {}\n".format(",".join(self.nav_labels)))
+                        filelike.write("inner-nav: {}\n".format(self.encoded_inner_nav()))
                         wrote_inner_nav = True
                     filelike.write(line)
                 else:
@@ -86,6 +87,8 @@ class MdParser:
             else:
                 filelike.write(line)
 
+    def encoded_inner_nav(self) -> str:
+        return ",".join([urllib.parse.quote(label, safe='') for label in self.nav_labels])
 
     def match_line_to_token(self, line): # (token, match)
         for k, v in self.tokens.items():
@@ -197,13 +200,13 @@ class MdParser:
             nav_label = "-".join(tokens)
             self.append_to_nav_labels_uniq(nav_label)
 
-
     def line_to_liquid_def(self) -> None:
-        var_name = self.last_match.group(1)
-        var_value = self.last_match.group(2)
-
-        if var_name == "inner-nav":
-            self.extend_to_nav_labels_uniq(var_value.split(","))
+        pass
+        # var_name = self.last_match.group(1)
+        # var_value = self.last_match.group(2)
+        # 
+        # if var_name == "inner-nav":
+        #     self.extend_to_nav_labels_uniq(var_value.split(","))
 
     def last_line(self) -> str:
         return self.file_buffer[-1:][0]
@@ -217,7 +220,7 @@ class MdParser:
 
     def append_to_nav_labels_uniq(self, label: str) -> None:
         if not label in self.nav_labels:
-                self.nav_labels.append(label)
+            self.nav_labels.append(label)
 
 
 def main() -> None:
