@@ -3,9 +3,9 @@
     alt -- Alt text for icon.
     title -- Position title.
     organization -- Employer during position.
-    responsibilities -- Array separated by @ of job responsibilities.
     start - Start date
     end - End date
+    content - Markdown to display as posting
   -->
 <div class="job-summary">
     <div class="job-header">
@@ -16,12 +16,7 @@
       </div>
     </div>
     <hr>
-    <ul>
-      {% assign responsibilities = include.responsibilities | split: '@' %}
-      {% for item in responsibilities %}
-        <li>{{ item }}</li>
-      {% endfor %}
-    </ul>
+    {{ include.content }}
     <div class="job-footer">
       <p>{{ include.start }} - {{ include.end }} </p>
     </div>

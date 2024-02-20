@@ -5,6 +5,12 @@ collections:
   posts:
     output:
       true
+  jobs:
+    output:
+      false
+  socials:
+    output:
+      false
 
 defaults:
   - scope:
