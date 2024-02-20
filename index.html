@@ -83,9 +83,23 @@ inner-nav: about,skills,experience,education,contact
     <h2>Experience</h2>
     <hr>
 
+    {{ include experience.html 
+      icon=""
+      alt=""
+      title="Web Developer"
+      organization="Laurentian University"
+      start="November 2023"
+      end="Present"
+      responsibilities=""
+    }}
+
+    <!--
     <div class="job-summary">
       <div class="job-header">
-        <img class="job-header-icon" src="assets/images/logos/jannatec.png" alt="Jannatec Logo">
+        <img 
+          class="job-header-icon" 
+          src="assets/images/logos/jannatec.png" 
+          alt="Jannatec Logo">
         <div class="job-header-text">
           <h3>Intermediate Programmer</h3>
           <h4>Jannatec Technologies</h4>
@@ -110,7 +124,22 @@ inner-nav: about,skills,experience,education,contact
         <p>May 2021 - Present</p>
       </div>
     </div>
+    -->
 
+    {{ include experience.html 
+      icon="assets/images/logos/jannatec.png"
+      alt="Jannatec Logo"
+      title="Intermediate Developer"
+      organization="Jannatec Technologies"
+      start="May 2021"
+      end="October 2023"
+      responsibilities="Incorporated UDP backup camera functionality into a collision avoidance system on the <i>Android</i> platform@
+      Develop applications on <i>Android</i> using <i>Kotlin</i>/<i>Java</i>/<i>C++</i> to test hardware and incorporate periperals into a CAS system such as NFC, fatigue management system, tire pressure sensor, and an app launcher@
+      Worked with microcontrollers to process peripheral communication in UART, CAN bus, J1939, Bluetooth SPP, and other formats@
+      Developed integrations with Motorola's MOTOTRBO radio network in C#@Wrote extensive developer documentation for projects using Word, LaTeX or other formats@Used <i>git</i> and <i>Jenkins</i> to setup a continuous delivery solution for projects@Performed experiments to test communication equipment including camera latency, successful packet deliverys, and serial error rate"
+    }}
+
+    <!--
     <div class="job-summary">
       <div class="job-header">
         <img class="job-header-icon" src="assets/images/logos/icmt.png" alt="ICMT Logo">
@@ -132,6 +161,21 @@ inner-nav: about,skills,experience,education,contact
       </div>
     </div>
   </div>
+  -->
+  {{ include experience.html 
+    icon="assets/images/logos/icmt.png"
+    alt="ICMT Logo"
+    title="Software Developer"
+    organization="Ingenious Countermeasures Technologies"
+    start="February 2020"
+    end="January 2021"
+    responsibilities="Designed and implemented a user interface for a <i>Python</i> application using <i>PyQt5</i>
+    Created a database to process 1 million records of LTE bands and store user's session information
+    Wrote a database export tool to generate reports in PDF format to summarize application results
+    Developed integrations with Motorola's MOTOTRBO radio network in C#@Wrote extensive developer documentation for projects using Word, LaTeX or other formats@Used <i>git</i> and <i>Jenkins</i> to setup a continuous delivery solution for projects@Performed experiments to test communication equipment including camera latency, successful packet deliverys, and serial error rate"
+    Managed code using version control, and distribution tools like apt, setup.py, and deb packages to deliver updates to users"
+  }}
+
 </section>
 
 <section id="education">
@@ -155,6 +199,7 @@ inner-nav: about,skills,experience,education,contact
     <h2>Contact</h2>
     <hr>
     <p>Feel free to connect with me on any of my linked platforms, but I am most responsive to email.</p>
+    <!--
     <div class="social-container">
       <img id="social-mail" class="social-icon" src="assets/images/logos/light/mail.svg" alt="Email">
       <div class="social-text">
@@ -162,7 +207,14 @@ inner-nav: about,skills,experience,education,contact
               class="hidden">_</i>gmail.com</a></p>
       </div>
     </div>
-
+    -->
+    {{ include social.html 
+      icon="assets/images/logos/light/mail.svg"
+      alt="Email"
+      link="mailto:bmcfadden00@gmail.com"
+      text="bmcfadden00<i class='hidden'>_</i>@<i class='hidden'>_</i>gmail.com"
+    }}
+    <!--
     <div class="social-container">
       <img id="social-linkedin" class="social-icon" src="assets/images/logos/light/linkedin.svg" alt="LinkedIn">
       <div class="social-text">
@@ -170,12 +222,26 @@ inner-nav: about,skills,experience,education,contact
         </p>
       </div>
     </div>
-
+    -->
+    {{ include social.html 
+      icon="assets/images/logos/light/linkedin.svg" 
+      link="https://www.linkedin.com/in/bradley-mcfadden-15b632242/" 
+      alt="LinkedIn" 
+      text="Bradley McFadden"
+    }}
+    <!--
     <div class="social-container">
       <img id="social-github" class="social-icon" src="assets/images/logos/light/github.svg" alt="GitHub">
       <div class="social-text">
         <p><a target="_blank" href="https://github.com/bradley-mcfadden">bradley-mcfadden</a></p>
       </div>
     </div>
+    -->
+    {{ include social.html 
+      icon="assets/images/logos/light/github.svg" 
+      link="https://github.com/bradley-mcfadden" 
+      alt="GitHub" 
+      text="bradley-mcfadden"
+    }}
   </div>
 </section>
