@@ -1,5 +1,3 @@
----
----
 <!--
     icon -- Link to icon to be used for organization.
     alt -- Alt text for icon.
@@ -19,7 +17,10 @@
     </div>
     <hr>
     <ul>
-      {% assign responsibilities = include.responsiblities | split: '\n' %}
+      {% assign responsibilities = include.responsibilities | split: '@' %}
+      {% for item in responsibilities %}
+        <li>{{ item }}</li>
+      {% endfor %}
     </ul>
     <div class="job-footer">
       <p>{{ include.start }} - {{ include.end }} </p>

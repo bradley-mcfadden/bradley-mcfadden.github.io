@@ -83,50 +83,21 @@ inner-nav: about,skills,experience,education,contact
     <h2>Experience</h2>
     <hr>
 
-    {{ include experience.html 
-      icon=""
-      alt=""
+    {% include experience.html 
+      icon="assets/images/logos/lu.jpeg"
+      alt="Laurentian University Icon"
       title="Web Developer"
       organization="Laurentian University"
       start="November 2023"
       end="Present"
-      responsibilities=""
-    }}
+      responsibilities="Oversee design aspects of Laurentian's web services@
+      Use database queries, markup langauges, SEO to implement web services@
+      Use of prototyping tools to create wireframes, screen layouts, interactive prototypes@
+      Develop, maintain and troubleshoot the tools, interfaces and portals to meet service goals@
+      Propose tools and make recommendations as needed for Laurentian's core websites and other applications"
+    %}
 
-    <!--
-    <div class="job-summary">
-      <div class="job-header">
-        <img 
-          class="job-header-icon" 
-          src="assets/images/logos/jannatec.png" 
-          alt="Jannatec Logo">
-        <div class="job-header-text">
-          <h3>Intermediate Programmer</h3>
-          <h4>Jannatec Technologies</h4>
-        </div>
-      </div>
-      <hr>
-      <ul>
-        <li>Incorporated UDP backup camera functionality into a collision avoidance system on the <i>Android</i>
-          platform</li>
-        <li>Develop applications on <i>Android</i> using <i>Kotlin</i>/<i>Java</i>/<i>C++</i> to test hardware and
-          incorporate periperals into a CAS system such as NFC, fatigue management system, tire pressure sensor,
-          and an app launcher</li>
-        <li>Worked with microcontrollers to process peripheral communication in UART, CAN bus, J1939, Bluetooth
-          SPP, and other formats</li>
-        <li>Developed integrations with Motorola's MOTOTRBO radio network in C#</li>
-        <li>Wrote extensive developer documentation for projects using Word, LaTeX or other formats</li>
-        <li>Used <i>git</i> and <i>Jenkins</i> to setup a continuous delivery solution for projects</li>
-        <li>Performed experiments to test communication equipment including camera latency, successful packet
-          deliverys, and serial error rate</li>
-      </ul>
-      <div class="job-footer">
-        <p>May 2021 - Present</p>
-      </div>
-    </div>
-    -->
-
-    {{ include experience.html 
+    {% include experience.html 
       icon="assets/images/logos/jannatec.png"
       alt="Jannatec Logo"
       title="Intermediate Developer"
@@ -134,47 +105,23 @@ inner-nav: about,skills,experience,education,contact
       start="May 2021"
       end="October 2023"
       responsibilities="Incorporated UDP backup camera functionality into a collision avoidance system on the <i>Android</i> platform@
-      Develop applications on <i>Android</i> using <i>Kotlin</i>/<i>Java</i>/<i>C++</i> to test hardware and incorporate periperals into a CAS system such as NFC, fatigue management system, tire pressure sensor, and an app launcher@
+      Developed applications on <i>Android</i> to test hardware and incorporate periperals into a CAS system@
       Worked with microcontrollers to process peripheral communication in UART, CAN bus, J1939, Bluetooth SPP, and other formats@
       Developed integrations with Motorola's MOTOTRBO radio network in C#@Wrote extensive developer documentation for projects using Word, LaTeX or other formats@Used <i>git</i> and <i>Jenkins</i> to setup a continuous delivery solution for projects@Performed experiments to test communication equipment including camera latency, successful packet deliverys, and serial error rate"
-    }}
+    %}
 
-    <!--
-    <div class="job-summary">
-      <div class="job-header">
-        <img class="job-header-icon" src="assets/images/logos/icmt.png" alt="ICMT Logo">
-        <div class="job-header-text">
-          <h3>Software Developer</h3>
-          <h4>Ingenious Countermeasures Technologies</h4>
-        </div>
-      </div>
-      <hr>
-      <ul>
-        <li>Designed and implemented a user interface for a <i>Python</i> application using <i>PyQt5</i></li>
-        <li>Created a database to process 1 million records of LTE bands and store user's session information</li>
-        <li>Wrote a database export tool to generate reports in PDF format to summarize application results</li>
-        <li>Managed code using version control, and distribution tools like apt, setup.py, and deb packages to
-          deliver updates to users</li>
-      </ul>
-      <div class="job-footer">
-        <p>Februray 2020 - January 2021</p>
-      </div>
-    </div>
-  </div>
-  -->
-  {{ include experience.html 
+  {% include experience.html 
     icon="assets/images/logos/icmt.png"
     alt="ICMT Logo"
     title="Software Developer"
     organization="Ingenious Countermeasures Technologies"
     start="February 2020"
     end="January 2021"
-    responsibilities="Designed and implemented a user interface for a <i>Python</i> application using <i>PyQt5</i>
-    Created a database to process 1 million records of LTE bands and store user's session information
-    Wrote a database export tool to generate reports in PDF format to summarize application results
-    Developed integrations with Motorola's MOTOTRBO radio network in C#@Wrote extensive developer documentation for projects using Word, LaTeX or other formats@Used <i>git</i> and <i>Jenkins</i> to setup a continuous delivery solution for projects@Performed experiments to test communication equipment including camera latency, successful packet deliverys, and serial error rate"
-    Managed code using version control, and distribution tools like apt, setup.py, and deb packages to deliver updates to users"
-  }}
+    responsibilities="Designed and implemented a user interface for a <i>Python</i> application using <i>PyQt5</i>@
+    Created a database to process 1 million records of LTE bands and store user's session information@
+    Wrote a database export tool to generate reports in PDF format to summarize application results@
+    Managed code using version control, and distribution tools like apt, setup.py, and deb packages todeliver updates to users"
+  %}
 
 </section>
 
@@ -199,49 +146,29 @@ inner-nav: about,skills,experience,education,contact
     <h2>Contact</h2>
     <hr>
     <p>Feel free to connect with me on any of my linked platforms, but I am most responsive to email.</p>
-    <!--
-    <div class="social-container">
-      <img id="social-mail" class="social-icon" src="assets/images/logos/light/mail.svg" alt="Email">
-      <div class="social-text">
-        <p><a target="_blank" href="mailto:bmcfadden00@gmail.com">bmcfadden00<i class="hidden">_</i>@<i
-              class="hidden">_</i>gmail.com</a></p>
-      </div>
-    </div>
-    -->
-    {{ include social.html 
+    
+    {% include social.html 
       icon="assets/images/logos/light/mail.svg"
       alt="Email"
       link="mailto:bmcfadden00@gmail.com"
       text="bmcfadden00<i class='hidden'>_</i>@<i class='hidden'>_</i>gmail.com"
-    }}
-    <!--
-    <div class="social-container">
-      <img id="social-linkedin" class="social-icon" src="assets/images/logos/light/linkedin.svg" alt="LinkedIn">
-      <div class="social-text">
-        <p><a target="_blank" href="https://www.linkedin.com/in/bradley-mcfadden-15b632242/">Bradley McFadden</a>
-        </p>
-      </div>
-    </div>
-    -->
-    {{ include social.html 
-      icon="assets/images/logos/light/linkedin.svg" 
-      link="https://www.linkedin.com/in/bradley-mcfadden-15b632242/" 
-      alt="LinkedIn" 
-      text="Bradley McFadden"
-    }}
-    <!--
-    <div class="social-container">
-      <img id="social-github" class="social-icon" src="assets/images/logos/light/github.svg" alt="GitHub">
-      <div class="social-text">
-        <p><a target="_blank" href="https://github.com/bradley-mcfadden">bradley-mcfadden</a></p>
-      </div>
-    </div>
-    -->
-    {{ include social.html 
+      id='social-mail'
+    %}
+    
+    {% include social.html 
+      icon='assets/images/logos/light/linkedin.svg'
+      link='https://www.linkedin.com/in/bradley-mcfadden-15b632242/'
+      alt='LinkedIn' 
+      text='Bradley McFadden'
+      id="social-linkedin"
+    %}
+    
+    {% include social.html 
       icon="assets/images/logos/light/github.svg" 
       link="https://github.com/bradley-mcfadden" 
       alt="GitHub" 
       text="bradley-mcfadden"
-    }}
+      id='social-github'
+    %}
   </div>
 </section>
