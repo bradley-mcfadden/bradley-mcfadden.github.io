@@ -22,6 +22,10 @@ $( document ).ready(function() {
         toggleDarkMode();
         persistDarkMode();
     });
+    // Load current date in bottom of page
+    const currentYear = new Date().getFullYear();
+    console.log(`Year: ${currentYear}`);
+    $("#current-year").html(`${currentYear}`);
 })
 
 window.onload = () => {
